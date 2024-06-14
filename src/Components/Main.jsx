@@ -1,8 +1,17 @@
+import { Route, Routes} from 'react-router-dom'
+import Home from './Home'
+import StarshipList from './StarshipList'
 
-
-const Main = () => {
+const Main = (props) => {
+    console.log("mainStarships",{props})
     return (
-    <h1>Main</h1>
+        <div className ="Main-Container">
+            
+            <Routes>
+                <Route path ="/" element = {<Home />} />
+                <Route path ="/StarshipList" element = {<StarshipList starships = {props.starships}/>}/>
+            </Routes>
+      </div>
       
     )
    }
