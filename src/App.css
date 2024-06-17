@@ -5,6 +5,7 @@
   text-align: center;
   background: linear-gradient(112.1deg, rgb(18, 24, 43) 11.4%, rgb(39, 44, 59) 70.2%);
   color: hsl(61, 77%, 53%);
+}
 
 .card {
   padding: 2em;
