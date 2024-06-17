@@ -7,10 +7,11 @@ const Nav = () => {
         <div className="Nav">
             
             <Link to="/"> Home </Link>
-            <Link to="/StarshipList"> StarshipList </Link>
+            <Link to="/StarshipList"> Starship List </Link>
             <Link to='/Films'> Films </Link>
             <Link to='/Planets'> Planets </Link>
             <Link to='/CharacterList'>Characters</Link>
+            
 
     </div>
     

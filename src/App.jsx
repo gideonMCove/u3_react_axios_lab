@@ -30,6 +30,8 @@ function App() {
   return (
     <>
      <div className="App">
+      <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet"/>
+                
       <Header />
       <Main starships = {starships} />
 
