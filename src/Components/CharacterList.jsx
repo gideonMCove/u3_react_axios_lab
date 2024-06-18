@@ -1,8 +1,15 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { BASE_URL } from '../globals'
+import { useNavigate } from "react-router-dom"
 
 const CharacterList = () => {
+
+    let navigate = useNavigate()
+
+    const showCharacter = (index) => {
+        navigate(`${index}`)
+    }
 
     const [characters, setCharacters] = useState([])
 
@@ -21,8 +28,8 @@ const CharacterList = () => {
         <div className="CharacterList">
             <h1>Character List</h1>
             {
-                characters.map((character)=> (
-                    <div key ={character.name} className ="charactercard">
+                characters.map((character, index)=> (
+                    <div className="characterDiv" onClick={()=>showCharacter(index)} key={index}>
                         <h3>{character.name}</h3>
                         </div>
                 ))

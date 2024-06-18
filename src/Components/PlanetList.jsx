@@ -1,12 +1,17 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { BASE_URL } from '../globals'
+import { useNavigate } from "react-router-dom"
 
 const PlanetList = () => {
-   
 
+	let navigate = useNavigate()
 
+	const showPlanet = (index) => {
+		navigate(`${index}`)
+	}
 
+	
     const [Planets, setPlanets] = useState([])
 
     useEffect(()=>{
@@ -28,8 +33,8 @@ const PlanetList = () => {
         <div className="PlanetsList">
             <h1>Planet List</h1>
             {
-                Planets.map((planet)=> (
-                    <div key ={planet.name} className ="planetcard">
+                Planets.map((planet, index)=> (
+                    <div className="PlanetDiv" onClick={()=>showPlanet(index)} key={index}>
                         <h3>{planet.name}</h3>
                         </div>
                 ))
